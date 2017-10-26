@@ -4793,7 +4793,10 @@ between column types.}%
 % V1.8 compsoc is partial width
 \ifCLASSOPTIONcompsoc
 % comparison with proofs suggests it's in the range of 92.1-92.3%
-\long\def\@IEEEtitleabstractindextextbox#1{\parbox{0.922\textwidth}{\@IEEEcompsocnotconfonly{\rightskip\@flushglue\leftskip\z@skip}#1}}
+%\long\def\@IEEEtitleabstractindextextbox#1{\parbox{0.922\textwidth}{\@IEEEcompsocnotconfonly{\rightskip\@flushglue\leftskip\z@skip}#1}}
+% EDITAN HANZ
+%\long\def\@IEEEtitleabstractindextextbox#1{\parbox{0.922\textwidth}{\@IEEEcompsocnotconfonly{\@flushglue\z@skip}#1}}
+\long\def\@IEEEtitleabstractindextextbox#1{\parbox{1\textwidth}{\@IEEEcompsocnotconfonly{\@flushglue\z@skip}#1}}
 \fi
 
 % formats the Title, authors names, affiliations and special paper notice
@@ -4818,8 +4821,9 @@ between column types.}%
          {\@IEEEcompsoconly{\sffamily}\@IEEEspecialpapernotice\mbox{}\vskip\@IEEEauthorblockconfadjspace%
           \mbox{}\hfill\begin{@IEEEauthorhalign}\@author\end{@IEEEauthorhalign}\hfill\mbox{}\par
           {\@IEEEcompsoconly{\vskip 1.5em\relax
-           \@IEEEtitleabstractindextextbox{\@IEEEtitleabstractindextext}\par\noindent\hfill
-           \IEEEcompsocdiamondline\hfill\hbox{}\par}}}\relax
+           % EDITAN HAN
+           %\@IEEEtitleabstractindextextbox{\@IEEEtitleabstractindextext}\par\noindent\hfill\IEEEcompsocdiamondline\hfill\hbox{}\par}}}\relax
+           \@IEEEtitleabstractindextextbox{\@IEEEtitleabstractindextext}\noindent}}}\relax
       \else% journal, peerreview or transmag
          \ifCLASSOPTIONtransmag
             % transmag also handles author names just like conference mode
@@ -4829,10 +4833,13 @@ between column types.}%
             \mbox{}\hfill\begin{@IEEEauthorhalign}\@author\end{@IEEEauthorhalign}\hfill\mbox{}\par
            {\vspace{0.5\baselineskip}\relax\@IEEEtitleabstractindextextbox{\@IEEEtitleabstractindextext}\vspace{-1\baselineskip}\par}}\relax
          \else% journal or peerreview
-           {\lineskip.5em\@IEEEcompsoconly{\sffamily}\sublargesize\@author\@IEEEspecialpapernotice\par
+            % EDITAN HAN
+           %{\lineskip.5em\@IEEEcompsoconly{\sffamily}\sublargesize\@author\@IEEEspecialpapernotice\par
+           {\lineskip.5em\@IEEEcompsoconly{\sffamily}\@author\@IEEEspecialpapernotice\par
            {\@IEEEcompsoconly{\vskip 1.5em\relax
-            \@IEEEtitleabstractindextextbox{\@IEEEtitleabstractindextext}\par\noindent\hfill
-            \IEEEcompsocdiamondline\hfill\hbox{}\par}}}\relax
+            % EDITAN HAN
+            %\@IEEEtitleabstractindextextbox{\@IEEEtitleabstractindextext}\par\noindent\hfill\IEEEcompsocdiamondline\hfill\hbox{}\par}}}\relax
+            \@IEEEtitleabstractindextextbox{\@IEEEtitleabstractindextext}\noindent}}}\relax
          \fi
       \fi
    \fi
@@ -5318,7 +5325,9 @@ between column types.}%
     \fi\@IEEEgobbleleadPARNLSP}
 \def\IEEEkeywords{\normalfont\@IEEEtweakunitybaselinestretch{1.15}\sffamily
     \if@twocolumn
-      \@IEEEabskeysecsize\vskip 0.5\baselineskip plus 0.25\baselineskip minus 0.25\baselineskip\noindent
+      % EDITAN HAN
+      %\@IEEEabskeysecsize\vskip 0.5\baselineskip plus 0.25\baselineskip minus 0.25\baselineskip\noindent
+      \@IEEEabskeysecsize\vskip 0.5\baselineskip\noindent
       \textbf{\IEEEkeywordsname}---\relax
     \else
       \bgroup\par\addvspace{0.5\baselineskip}\centering\@IEEEabskeysecsize\textbf{\IEEEkeywordsname}\par\addvspace{0.5\baselineskip}\egroup\quotation\@IEEEabskeysecsize%
