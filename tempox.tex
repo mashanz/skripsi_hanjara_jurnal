@@ -48,9 +48,11 @@
 }
 
 \author{
+	%\begin{multicols}{3}
 	$^1$Fairuz Azmi, $^2$Surya Michrandi, $^3$Hanjara Cahya Adhyatma\\
 	$^1^2^3$School of Electrical Engineering, Telkom University, Bandung, Indonesia\\
-	$^1$worldliner@telkomuniversity.ac.id, $^2$michrandi@telkomuniversity.ac.id, $^3$adhyatma.han@google.com
+	E-mail : $^1$worldliner@telkomuniversity.ac.id, $^2$michrandi@telkomuniversity.ac.id, $^3$adhyatma.han@google.com
+	%\end{multicols}
 }
 
 \IEEEtitleabstractindextext{%
@@ -73,10 +75,7 @@ VLSI, Intellectual Property Protection, Digital Signal Processing, Polygate Wate
 	\label{sec:introduction}
 \fi
 
-Providing a series of watermarks as a safeguard to a printed VLSI blueprint that indicates ownership of the designer or module manufacturer will protect against cheating others who will steal the design. So the possibility of theft or plagiarism that causes losses to the company or designer because of its design is stolen or plagiarism reduced.\cite{vlsi.hist}
-
-\section{LSI Development Flow}
-Possibility type of attack is changing over time. It is caused based of how bussiness flow in VLSI Design are olso changed. In the early day of VLSI development, a system from designing a module until design is delivered to custommer is done by solo manufacturrer industries.
+Providing a series of watermarks as a safeguard to a printed VLSI blueprint that indicates ownership of the designer or module manufacturer will protect against cheating others who will steal the design. So the possibility of theft or plagiarism that causes losses to the company or designer because of its design is stolen or plagiarism reduced.\cite{IEEEhowto:kopka}
 
 \begin{figure}
 	\centering
@@ -85,8 +84,6 @@ Possibility type of attack is changing over time. It is caused based of how buss
 	\label{oldb}
 \end{figure}
 
-As the shown image above, generally there is 2 type of interaction. There are interaction between custommer and developer (A to B) and interaction between developer and customer (B to A). In this scheme the gap of distribution of design is between A and B side. In this early day security is not much worries.
-
 \begin{figure}
 	\centering
 	\includegraphics[scale=0.5]{images/newBusinessLSI}
@@ -94,82 +91,77 @@ As the shown image above, generally there is 2 type of interaction. There are in
 	\label{newb}
 \end{figure}
 
-But after advancing in the manufacturing of VLSI and increasing demmand of the design. Design become more complicated and cost to manufacturing from scratch to delivering design are expensive in this day. So the solution to do manufacturing of VLSI design is using Fabless manufacturing. As shown in the figure above, there are generally 4 side element for manufacturing a single or combination design module of VLSI. In this method designer and manufacturer are diferent company. In this technique have great advantage because the cost for designing a Design is distributed to each side, and design is more flexible because on the "B" side company, they can make design without have a their own Fabrication Building (Fabless).
+\section{Related Works}
+Broadly speaking the technique of Intellectual Property Protection (IPP) watermarking can be classified into 2 classes namely Dynamic Watermarking and Static Watermarking. Dynamic Watermarking is a watermark that can not be detected except by running a watermarked IP to detect the resulting signal, such as digital signal processing (DSP), or finite state mechine (FSM) watermarking. Static Watermarking is a watermark that refers to the properties of a design, and can only be detected in different static ways, such as paths and watermarking placements.[2] One of the other safeguards is to convert the simulated file from a file. The RTL source code that enables is not easy to be reverse-engineered by third parties, so the model can not be changed and reused with other purposes by third parties and irresponsible users. However, this way only protects from the softwere side that protects the IP from being misused by third party users.[3] For IP security used in project sharing and reusable projects can be used with the security of Digital Signal Processing cell that allows integration in the system.
 
-\section{Attack Possibility}
-\blindtext[2]
+In this research will perform a combination of polymorph gate IP protection with digital filter algorithm. Using a combination of these two techniques will provide additional security to IP protection that is likely to over write a smaller watermark. Therefore in this study proposed a combination of existing methods to improve security capabilities in an existing VLSI module. Combine polygate as a combination key to enable the digital filter module to be used as a watermark.
 
-\subsection{Clonning}
-\begin{figure}
-	\centering
-	\includegraphics[width=0.4\textwidth]
-	{images/untrustSource.png}
-	\caption{Clonning}
-	\label{clonning}
-\end{figure}
-
-\subsection{Reverse Engineering}
-\begin{figure}
-	\centering
-	\includegraphics[width=0.4\textwidth]
-	{images/reverseEngineering.png}
-	\caption{Reverse Enginerring}
-	\label{rever}
-\end{figure}
-
-\section{Multi Obfuscation}
+\section{Watermarking}
+Providing a series of watermarks as a safeguard to a printed VLSI blueprint that indicates ownership of the designer or module manufacturer will protect against cheating others who will steal the design. So the likelihood of theft or plagiarism is reduced which causes losses to the company or the designer because of his design is stolen or in plagiarism.
 
 \begin{figure}
 	\centering
-	\includegraphics[width=0.3\textwidth]
-	{images/gatePlace.PNG}
-	\caption{Obfuscation Mixed Placement Between 2 Module}
-	\label{mobf}
+	\includegraphics[scale=0.45]{images/box}
+	\caption{Simulation results for the network.}
+	\label{fig_sim}
 \end{figure}
 
-\subsection{Digital Filter}
-
-\subsection{Polimorph Gate}
-In this research is using combination between polimorph-gate and Digital Signal Processing. This combination will be determined and enabled by polygate as a key to activating a combination of digital filters. After the digital filter is active then the data combination will pass through a combination of filters enabled from the polygate combination.[8], [9] Then the result data combination of these processes will form a special pattern that becomes the watermark data of the designer that characterizes the identity of the designer.
+\begin{figure}
+	\centering
+	\includegraphics[scale=1]{images/gatePlace}
+	\caption{Placement}
+	\label{place}
+\end{figure}
 
 \begin{figure}
+	\centering
+	\includegraphics[scale=0.6]{images/topAsk}
+	\caption{Obfuscation}
+	\label{topask}
+\end{figure}
+
+\begin{figure}
+	\centering
+	\includegraphics[scale=0.6]{images/top}
+	\caption{Obfuscation Function}
+	\label{top}
+\end{figure}
+
+\begin{figure}
+	\centering
+	\includegraphics[scale=0.5]{images/simulasiAlat}
+	\caption{Simulation}
+	\label{simulation}
+\end{figure}
+
+
+The design will be designed with a combination of Low Pass Filter, High Pass Filter, Band Pass Filter, and Band Reject Filter. This combination will be determined and enabled by polygate as a key to activating a combination of digital filters. After the digital filter is active then the data combination will pass through a combination of filters enabled from the polygate combination.[8], [9] Then the result data combination of these processes will form a special pattern that becomes the watermark data of the designer that characterizes the identity of the designer. Once given the watermark then the module will be tested again its performance. If there is a decrease in performance it should be re-improved the algorithm and then re-tested its performance until obtained the best performance.
+
+\subsection{Polymorph}
+\begin{figure}[ht]
 	\centering
 	\includegraphics[scale=0.65]{images/polymorphgate}
 	\caption{Simulation results for the network.}
 	\label{fig_sim}
 \end{figure}
-
 Polymorph gate is gate that will change the property of gate such while the key selector key is change. Example is from AND function will active while key is 0101 and it will change to NOR function while key change to 1101.
 
-\begin{center}
-	F = A XOR (A \textbf{AND} B)
-\end{center}
-
-\begin{center}
-	F = A XOR (A \textbf{NOR} B)
-\end{center}
-
-\section{Digital Filter Obfuscation Mixed Algorithm}
-
-\begin{figure}
+\subsection{Watermark Flow}
+Filter is 3 bit data filter that will clip maximal value or minimal value that has set before. So the data that will go through system is accepted data from clipping filter.
+\begin{figure}[ht]
 	\centering
-	\includegraphics[width=0.4\textwidth]
-	{images/topAsk.png}
-	\caption{Obfuscation}
-	\label{obf}
+	\includegraphics[scale=0.45]{images/flow}
+	\caption{Simulation results for the network.}
+	\label{fig_sim}
 \end{figure}
+In this illustration showed how IC is watermarked with given technique. With polymorph gate as bridge between watermark and main circuit function and key pin as gate to access between main function and watermark. To access watermark, developer will activated combined code to given key pin in the printed IC, and after the key activated it will open bridge in the polymorph to watermark circuit. After watermark circuit is opened, developer will inject secret encoded data to circuit and it will decode the given data as signature on the output pin. Data injected as bit stream so it need time to inject and waiting for de-coded output stream.
 
-\begin{figure}
-	\centering
-	\includegraphics[width=0.4\textwidth]
-	{images/top.png}
-	\caption{Internal System Obfuscation}
-	\label{iobf}
-\end{figure}
+To extract signature from injected data it will counting how many data will be slice and clip it until given tolerate count. After that data will be checked if the data is inside tolerated range, if yes data will be transferred to polymorph I/O as extracted signature data.
 
-\section{Analisys}
-
-\begin{table}
+\subsection{Data I/O}
+Data in data out is example how filter is going in and let the verification data through system generated and will procced so data will change to specific bit array. By injected long bit stream data to IC with purpose to deceive the attacker. And the output is just specific short bit stream data. The purpose given long input and short output is to avoid watermarks is detected by forced data injection. And here is example with streaming bit data with clipping on the 5/1 injection data. With 20 data stream and 4 data output as zero is ignored. Inputted data will be procced with given algorithm before to extract signature data.
+{\renewcommand{\arraystretch}{1.2}
+\begin{table}[ht]
 	\centering
 	\caption{Data time verification 20 to 4 clock}
 	\label{my-label}
@@ -199,8 +191,52 @@ Polymorph gate is gate that will change the property of gate such while the key 
 		19                           & 0                            & 0                            & 0                            &                       &                                                   &                                                    &                                                    &                                                    \\ \cline{1-4}
 	\end{tabular}
 \end{table}
+}
 
-\begin{table}
+
+\subsection{Layouting}
+Gate for layout use CMOS technology. The protection use simple basic CMOS gate for mixed implemented for hard removal from reverse engineering, there are:
+\begin{figure}[ht]
+	\centering
+	\subfloat[Case I]{
+		\includegraphics[width=0.9in]{images/gateNAND} \label{fig_first_case}}
+	\hfil
+	\subfloat[Case II]{
+		\includegraphics[width=0.9in]{images/gateNOR} \label{fig_second_case}}
+	\hfil
+	\subfloat[Case III]{
+		\includegraphics[width=0.9in]{images/gateNOT} \label{fig_second_case}}
+	\caption{Simulation results for the network.}
+	\label{fig_sim}
+\end{figure}
+\subsection{Layout Verification}
+For simple see through layout with just verification without mixed gate placement, here is total gate if the gate collected as one cell:
+\begin{figure}[ht]
+	\centering
+	\includegraphics[scale=0.8]{images/gate1}
+	\caption{Simulation results for the network.}
+	\label{fig_sim}
+\end{figure}
+\subsection{Mixed Random Gate Placement}
+In general technique when engineer will manufacturing IC is make hierarchy of cells so it will easy to routing and tracing circuit problem. But if the watermark circuit is manufactured with that technique it will easy to expose watermark circuit inside the IC. So it will lead to hard removal and reverse engineered the IC. To prevent that happening the watermark cell will generate without hierarchy and placed with random routing algorithm. So it will not be so obvious that watermark’s circuit is implemented within the main IC core circuit.
+\begin{figure}[ht]
+	\centering
+	\includegraphics[scale=1.0]{gatePlace}
+	\caption{Simulation results for the network.}
+	\label{fig_sim}
+\end{figure}
+Mixed Random Gate Placement is randomize Verification’s components with main IP cell component. So it will placed wherever inside IP cell. Here is figure that tell how verification’s components gate placed inside main IP cell:
+
+The dark dot representation of NAND, NOR and INVERTER from verification components. So for hard removal watermark it will change entire design and it will harder to detect watermark from random placement.
+
+\section{Analysis}
+In this section, analysis is focution on how watermark actualy didn't create error to original design
+so watermark will be usefull to protect original design from thiefing.
+
+\subsection{Watermark softwere simulation}
+This is simulation from data given before. Data from device to read and inject data is translated as alphabetic character from 3 bits data stream. It is show long data stream with short data output as signature.
+{\renewcommand{\arraystretch}{1.2}
+\begin{table}[ht]
 	\centering
 	\caption{Input Array}
 	\label{inputarray}
@@ -229,131 +265,73 @@ Polymorph gate is gate that will change the property of gate such while the key 
 		\multicolumn{1}{|l|}{OUTPUT} & \multicolumn{1}{l|}{CABE}                \\ \hline
 	\end{tabular}
 \end{table}
+}
 
-
-\begin{table}
+\subsection{Power Consumption Orogonal Design}
+Power consumption is the most important thing in the electronic design, adding more component
+mean more power is needded to drive the device. Here data from experiment with original design
+in power consumption needed to drive the device:
+{\renewcommand{\arraystretch}{1.2}
+\begin{table}[ht]
 	\centering
-	\caption{FPGA Speed Analysis}
-	\label{tab:speed}%
-	\begin{tabular}{|l|c|c|}
+	\caption{Original Power}
+	\label{my-label}
+	\begin{tabular}{|c|c|c|c|}
 		\hline
-		\rowcolor[rgb]{ .906,  .902,  .902} \multicolumn{1}{|c|}{Unprotected} & Minimum & Maximum \bigstrut\\
-		\hline
-		Period & 2.692ns & 371.471MHz (freq) \bigstrut\\
-		\hline
-		Input arrival time before clock & 10.075ns & - \bigstrut\\
-		\hline
-		Output required time after clock & -     & 5.558ns \bigstrut\\
-		\hline
-		\rowcolor[rgb]{ .906,  .902,  .902} \multicolumn{1}{|c|}{Protected} & Minimum & Maximum \bigstrut\\
-		\hline
-		Period & 4.023ns & 248.571MHz (freq) \bigstrut\\
-		\hline
-		Input arrival time before clock & 8.667ns & - \bigstrut\\
-		\hline
-		Output required time after clock & -     & 6.962ns \bigstrut\\
-		\hline
-	\end{tabular}%
-\end{table}%
+		\rowcolor[HTML]{C0C0C0} 
+		\begin{tabular}[c]{@{}c@{}}Supply\\ Source\end{tabular} & \begin{tabular}[c]{@{}c@{}}Supply\\ Voltage\end{tabular} & \begin{tabular}[c]{@{}c@{}}Total\\ Current\\ (mA)\end{tabular} & \begin{tabular}[c]{@{}c@{}}Quiescent\\ Current\\ (mA)\end{tabular} \\ \hline
+		\cellcolor[HTML]{EFEFEF}Vccint                          & 1.2                                                      & 2.01                                                           & 2.01                                                               \\ \hline
+		\cellcolor[HTML]{EFEFEF}Vccaux                          & 2.5                                                      & 3.00                                                           & 3.00                                                               \\ \hline
+		\cellcolor[HTML]{EFEFEF}Vcco25                          & 2.5                                                      & 0.20                                                           & 0.20                                                               \\ \hline
+	\end{tabular}
+\end{table}
+}
 
-
-\begin{table}
+\subsection{Power Consumption Watermark}
+Power consumption is the most important thing in the electronic design, adding more component
+mean more power is needded to drive the device. Here data from experiment with original design
+in power consumption needed to drive the device:
+{\renewcommand{\arraystretch}{1.2}
+	\begin{table}[ht]
+		\centering
+		\caption{Watermark Power}
+		\label{watermark}
+		\begin{tabular}{|c|c|c|c|}
+			\hline
+			\rowcolor[HTML]{C0C0C0} 
+			\begin{tabular}[c]{@{}c@{}}Supply\\ Source\end{tabular} & \begin{tabular}[c]{@{}c@{}}Supply\\ Voltage\end{tabular} & \begin{tabular}[c]{@{}c@{}}Total\\ Current\\ (mA)\end{tabular} & \begin{tabular}[c]{@{}c@{}}Quiescent\\ Current\\ (mA)\end{tabular} \\ \hline
+			\cellcolor[HTML]{EFEFEF}Vccint                          & 1.2                                                      & 2.89                                                           & 2.01                                                               \\ \hline
+			\cellcolor[HTML]{EFEFEF}Vccaux                          & 2.5                                                      & 3.00                                                           & 3.00                                                               \\ \hline
+			\cellcolor[HTML]{EFEFEF}Vcco25                          & 2.5                                                      & 0.20                                                           & 0.20                                                               \\ \hline
+		\end{tabular}
+	\end{table}
+}
+%////////////////////////////////////////////////////////////////////////////////////
+% COMPARISON
+%////////////////////////////////////////////////////////////////////////////////////
+\subsection{Comparison}
+On the Table 2 are comparison about all parameter that tested on
+{\renewcommand{\arraystretch}{1.2}
+\begin{table}[ht]
 	\centering
-	\caption{On-Chip Power Summary}
-	\label{tab:power}%
-	\begin{tabular}{|l|c|}
-		\hline
-		\rowcolor[rgb]{ .906,  .902,  .902} \multicolumn{1}{|c|}{Unprotected} & Power (mW) \bigstrut\\
-		\hline
-		Clock & 1.12 \bigstrut\\
-		\hline
-		Static Power & 10.42 \bigstrut\\
-		\hline
-		Total & 11.54 \bigstrut\\
-		\hline
-		\rowcolor[rgb]{ .906,  .902,  .902} \multicolumn{1}{|c|}{Protected} & Power (mW) \bigstrut\\
-		\hline
-		Clock & 1.37 \bigstrut\\
-		\hline
-		Static Power & 10.42 \bigstrut\\
-		\hline
-		Total & 11.79 \bigstrut\\
-		\hline
-	\end{tabular}%
-\end{table}%
-
-\begin{table}
-	\centering
-	\caption{Power Supply Currents}
-	\label{tab:addlabel}%
+	\caption{Comparison}
+	\label{comparison}
 	\begin{tabular}{|c|c|c|c|c|}
 		\hline
-		\rowcolor[rgb]{ .906,  .902,  .902} \multicolumn{5}{|c|}{Unprotected} \bigstrut\\
-		\hline
-		\rowcolor[rgb]{ .906,  .902,  .902} \multicolumn{1}{|p{4.93em}|}{Supply Source} & \multicolumn{1}{p{4.93em}|}{Supply Voltage} & \multicolumn{1}{p{4.93em}|}{Total Current (mA)} & \multicolumn{1}{p{4.93em}|}{Dynamic Current (mA)} & \multicolumn{1}{p{4.93em}|}{Quiescent Current (mA)} \bigstrut\\
-		\hline
-		Vccint & 1.20  & 2.95  & 0.94  & 2.01 \bigstrut\\
-		\hline
-		Vccaux & 2.50  & 3.00  & 0.00  & 3.00 \bigstrut\\
-		\hline
-		Vcco25 & 2.50  & 0.20  & 0.00  & 0.20 \bigstrut\\
-		\hline
-		\rowcolor[rgb]{ .906,  .902,  .902} \multicolumn{5}{|c|}{Protected} \bigstrut\\
-		\hline
-		\rowcolor[rgb]{ .906,  .902,  .902} \multicolumn{1}{|p{4.93em}|}{Supply Source} & \multicolumn{1}{p{4.93em}|}{Supply Voltage} & \multicolumn{1}{p{4.93em}|}{Total Current (mA)} & \multicolumn{1}{p{4.93em}|}{Dynamic Current (mA)} & \multicolumn{1}{p{4.93em}|}{Quiescent Current (mA)} \bigstrut\\
-		\hline
-		Vccint & 1.20  & 3.16  & 1.14  & 2.02 \bigstrut\\
-		\hline
-		Vccaux & 2.50  & 3.00  & 0.00  & 3.00 \bigstrut\\
-		\hline
-		Vcco25 & 2.50  & 2.00  & 0.00  & 0.20 \bigstrut\\
-		\hline
-	\end{tabular}%
-\end{table}%
-
-\begin{figure}
-	\centering
-	\includegraphics[width=0.4\textwidth]
-	{images/suplay_voltage.png}
-	\caption{Suplay Voltages}
-	\label{SuplayVoltage}
-\end{figure}
-
-\begin{figure}
-	\centering
-	\includegraphics[width=0.4\textwidth]
-	{images/total_current.png}
-	\caption{Total Current}
-	\label{TotalCurrent}
-\end{figure}
-
-\begin{figure}
-	\centering
-	\includegraphics[width=0.4\textwidth]
-	{images/quiescent_current.png}
-	\caption{Quiescent Current}
-	\label{Quiescent Current}
-\end{figure}
-
-\begin{table}
-	\centering
-	\caption{Gate yang digunakan setelah kompilasi ke netlist}
-	\label{tab:gate}%
-	\begin{tabular}{|c|c|}
-		\hline
-		\rowcolor[rgb]{ .906,  .902,  .902} Gate Synthesys & Gates \bigstrut\\
-		\hline
-		\rowcolor[rgb]{ .906,  .902,  .902} Unprotected & \cellcolor[rgb]{ 1,  1,  1} 5234 \bigstrut\\
-		\hline
-		\rowcolor[rgb]{ .906,  .902,  .902} Protected & \cellcolor[rgb]{ 1,  1,  1} 5324 \bigstrut\\
-		\hline
-	\end{tabular}%
-\end{table}%
-
+		\rowcolor[HTML]{C0C0C0} 
+		No.                        & Parameter  & Before & After  & Delta \\ \hline
+		\cellcolor[HTML]{EFEFEF}1. & Gates      & 5234   & 5324   & 1.72  \\ \hline
+		\cellcolor[HTML]{EFEFEF}2. & Layout     & Lamda  & lamda  &       \\ \hline
+		\cellcolor[HTML]{EFEFEF}3. & Power      & A      & A      &       \\ \hline
+		\cellcolor[HTML]{EFEFEF}4. & Functional & Normal & Normal & zero  \\ \hline
+	\end{tabular}
+\end{table}
+}
 %////////////////////////////////////////////////////////////////////////////////////
 % KESIMPULAN
 %////////////////////////////////////////////////////////////////////////////////////
 \section{Conclusion}
+From the experiment testing for performance analysis with given parameter. The percentage change is still within reasonable limits. So that in its application still can be applied.
 
 \ifCLASSOPTIONcaptionsoff
   \newpage
@@ -362,7 +340,7 @@ Polymorph gate is gate that will change the property of gate such while the key 
 \begin{thebibliography}{1}
 
 \bibitem{vlsi.hist}
-"The History of the Integrated Circuit". Nobelprize.org. Nobel Media AB 2014. Web. 25 Aug 2017. http://www.nobelprize.org/educational/physics/\\integrated\_circuit/history/
+{"The History of the Integrated Circuit". Nobelprize.org. Nobel Media AB 2014. Web. 25 Aug 2017. \url{http://www.nobelprize.org/educational/physics/integrated_circuit/history/}.}
 
 \bibitem{Azriel2017}
 Leonid Azriel, Student Member, Ran Ginosar, Senior Member, and Shay Gueron.
@@ -524,7 +502,7 @@ Jiliang Zhang and Lele Liu.
 
 \end{thebibliography}
 
-\begin{IEEEbiography}[{\includegraphics[width=1in,height=1.25in,clip,keepaspectratio]{./images/hanjara}}]{Hanjara Cahya Adhyatma}
+\begin{IEEEbiography}[{\includegraphics[width=1in,height=1.25in,clip,keepaspectratio]{./images/paksurya}}]{Surya Michrandi}
 \blindtext[1]
 \end{IEEEbiography}
 
@@ -532,7 +510,7 @@ Jiliang Zhang and Lele Liu.
 \blindtext[1]
 \end{IEEEbiography}
 
-\begin{IEEEbiography}[{\includegraphics[width=1in,height=1.25in,clip,keepaspectratio]{./images/paksurya}}]{Surya Michrandi}
+\begin{IEEEbiography}[{\includegraphics[width=1in,height=1.25in,clip,keepaspectratio]{./images/hanjara}}]{Hanjara Cahya Adhyatma}
 \blindtext[1]
 \end{IEEEbiography}
 
