@@ -2609,9 +2609,9 @@
 \@IEEEcompsocconfonly{\def\figurename{Figure}}
 \def\partname{Part}
 \def\appendixname{Appendix}
-\def\abstractname{Abstract}
+\def\abstractname{}
 % IEEE specific names
-\def\IEEEkeywordsname{Index Terms}
+\def\IEEEkeywordsname{Keywords: }
 \def\IEEEproofname{Proof}
 
 
@@ -5281,7 +5281,7 @@ between column types.}%
 % so that spacing is more tightly controlled.
 \def\abstract{\normalfont
     \if@twocolumn
-      \@IEEEabskeysecsize\bfseries\textit{\abstractname}---\relax
+      \@IEEEabskeysecsize\bfseries\centering\textit{\abstractname}\\\relax
     \else
       \bgroup\par\addvspace{0.5\baselineskip}\centering\vspace{-1.78ex}\@IEEEabskeysecsize\textbf{\abstractname}\par\addvspace{0.5\baselineskip}\egroup\quotation\@IEEEabskeysecsize
     \fi\@IEEEgobbleleadPARNLSP}
@@ -5292,7 +5292,7 @@ between column types.}%
 
 \def\IEEEkeywords{\normalfont
     \if@twocolumn
-      \@IEEEabskeysecsize\bfseries\textit{\IEEEkeywordsname}---\relax
+      \@IEEEabskeysecsize\bfseries\textit{\IEEEkeywordsname}\relax
     \else
       \bgroup\par\addvspace{0.5\baselineskip}\centering\@IEEEabskeysecsize\textbf{\IEEEkeywordsname}\par\addvspace{0.5\baselineskip}\egroup\quotation\@IEEEabskeysecsize
     \fi\@IEEEgobbleleadPARNLSP}
@@ -5305,21 +5305,21 @@ between column types.}%
   \ifCLASSOPTIONconference% compsoc conference
 \def\abstract{\normalfont\@IEEEtweakunitybaselinestretch{1.15}\bfseries
     \if@twocolumn
-      \@IEEEabskeysecsize\noindent\textit{\abstractname}---\relax
+      \@IEEEabskeysecsize\noindent\centering\textit{\abstractname}\centering\\\relax
     \else
       \bgroup\par\addvspace{0.5\baselineskip}\centering\vspace{-1.78ex}\@IEEEabskeysecsize\textbf{\abstractname}\par\addvspace{0.5\baselineskip}\egroup\quotation\@IEEEabskeysecsize%
     \fi\@IEEEgobbleleadPARNLSP}
 \def\IEEEkeywords{\normalfont\@IEEEtweakunitybaselinestretch{1.15}\bfseries
     \if@twocolumn
       \@IEEEabskeysecsize\vskip 0.5\baselineskip plus 0.25\baselineskip minus 0.25\baselineskip\noindent
-      \textit{\IEEEkeywordsname}---\relax
+      \textit{\IEEEkeywordsname}\relax
     \else
       \bgroup\par\addvspace{0.5\baselineskip}\centering\@IEEEabskeysecsize\textbf{\IEEEkeywordsname}\par\addvspace{0.5\baselineskip}\egroup\quotation\@IEEEabskeysecsize%
     \fi\@IEEEgobbleleadPARNLSP}
   \else% compsoc not conference
 \def\abstract{\normalfont\@IEEEtweakunitybaselinestretch{1.15}\sffamily
     \if@twocolumn
-      \@IEEEabskeysecsize\noindent\textbf{\abstractname}---\relax
+      \@IEEEabskeysecsize\noindent\centering\textbf{\abstractname}\\\relax
     \else
       \bgroup\par\addvspace{0.5\baselineskip}\centering\vspace{-1.78ex}\@IEEEabskeysecsize\textbf{\abstractname}\par\addvspace{0.5\baselineskip}\egroup\quotation\@IEEEabskeysecsize%
     \fi\@IEEEgobbleleadPARNLSP}
@@ -5328,7 +5328,7 @@ between column types.}%
       % EDITAN HAN
       %\@IEEEabskeysecsize\vskip 0.5\baselineskip plus 0.25\baselineskip minus 0.25\baselineskip\noindent
       \@IEEEabskeysecsize\vskip 0.5\baselineskip\noindent
-      \textbf{\IEEEkeywordsname}---\relax
+      \textbf{\IEEEkeywordsname}\relax
     \else
       \bgroup\par\addvspace{0.5\baselineskip}\centering\@IEEEabskeysecsize\textbf{\IEEEkeywordsname}\par\addvspace{0.5\baselineskip}\egroup\quotation\@IEEEabskeysecsize%
     \fi\@IEEEgobbleleadPARNLSP}
@@ -5348,7 +5348,7 @@ between column types.}%
 
 \def\IEEEkeywords{\normalfont\parindent 1em\relax
     \if@twocolumn
-      \@IEEEabskeysecsize\vspace{1\baselineskip}\bfseries\indent\textit{\IEEEkeywordsname}---\relax
+      \@IEEEabskeysecsize\vspace{1\baselineskip}\bfseries\indent\textit{\IEEEkeywordsname}\relax
     \else
       \bgroup\par\vspace{1\baselineskip}\centering\@IEEEabskeysecsize
       \textbf{\IEEEkeywordsname}\par\addvspace{0.5\baselineskip}\egroup\quotation\@IEEEabskeysecsize
